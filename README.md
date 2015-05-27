@@ -19,12 +19,12 @@ Once the assembly and .psd1 are in place, import the module
 ## Running
 You will need a connection string to an Azure Service Bus namespace.
 
-<pre>Get-AzureServiceBusQueue 
--ConnectionString "Endpoint=sb://NotTelling;SharedAccessKeyName=StillNotTelling;SharedAccessKey=NotMyPassword"</pre>
+<pre>
+Get-AzureServiceBusQueue 
+-ConnectionString "Endpoint=sb://NotTelling;SharedAccessKeyName=StillNotTelling;SharedAccessKey=NotMyPassword"
+</pre>
 
-This will return details of all the queues in that namespace.
-
-To filter the results to specific queues, you can use the Name option:
+This will return details of all the queues in that namespace. To filter the results to specific queues, you can use the Name option:
 
 <pre>Get-AzureServiceBusQueue -ConnectionString "Endpoint=..." -Name "MyQueue"</pre>
 
@@ -32,8 +32,8 @@ Or
 
 <pre>Get-AzureServiceBusQueue -ConnectionString "Endpoint=..." -Name "MyQueue", "MyOtherQueue"</pre>
 
-## Output
-The output is the name, active message count and the dead letter message count:
+## Sample Output
+The output for each queue is the name, active message count and the dead letter message count:
 
 <pre>
 Name             ActiveCount  DeadLetterCount
